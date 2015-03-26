@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNLV Student Support Application</title>
+    <link rel='stylesheet' type='text/css' href="../index.css">
+
+</head>
+
+<h2>UNLV Student Support Application</h2>
+<h2>Login To MyUNLV</h2>
+
+<script>
+function goBack() {
+    window.history.back()
+}
+</script>
+
+<div class="login">
+        <table>
+            <tr>
+                <td><input class="MyUNLVEdit" type="text" name="username" value="" placeholder="NSHE #" />
+                </td>
+            </tr>
+            <tr>
+                <td><input class="MyUNLVPassEdit" type="Password" name="password" value="" placeholder="Password" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="submitBtn" type="button" onClick="location.href='logedInMyUNLV.html'">Log In</button>
+                </td>
+            </tr>
+        </table>
+</div>
+
+<button class="backBtn" onclick="goBack()">Go Back</button>
+
+
+</html>
