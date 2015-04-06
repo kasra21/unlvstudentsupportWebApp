@@ -1,11 +1,12 @@
 body { 
       background: #666666;
-    }
-h2 { 
-	color: #FFFFFF;
+      color: #FFF;
+}
+
+.titleText { 
 	text-align: center;
 }
-a {
+.subMenu {
   display: block;
   text-decoration: none;
   width: 100%;
@@ -13,11 +14,10 @@ a {
   color: #000;
 }
 
-a:hover { color: #777; }
+.subMenu:hover { color: #777; }
 
 /* mainList */
 .mainList {
-  /*box-shadow: 5px 5px 5px #000;*/
   list-style: none;
   padding: 0;
   width: 250px; 
@@ -27,13 +27,11 @@ a:hover { color: #777; }
   position: relative; 
   z-index: 100;
 }
-
 .mainList, .mainList a.main {
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
 }
-
 .mainList:hover, .mainList:hover a.main {
   border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px 4px 0 0;
@@ -63,7 +61,7 @@ a:hover { color: #777; }
   width: 250px; 
   height: 40px;
   background: #F7F7F7;
-  font: normal 12px/40px arial, sans-serif !important; 
+  font: normal 12px/40px arial, sans-serif !important; /*this is forced*/
   color: #999;
   text-align: center;
   margin: 0;
@@ -168,30 +166,14 @@ a:hover { color: #777; }
   transition-delay: 1.4s;
 }
 
-.backBtn {
-
+#CustBtn {
   border-radius: 28px;
-  background: #C10202;
   font: bold 15px/40px arial, sans-serif; 
-  color: #FFF;
   margin-bottom: 20px;
-  width: 100px; 
-  height: 40px;
-
-}
-
-.submitBtn {
-  border-radius: 28px;
-  background: #C10202;
-  font: bold 15px/40px arial, sans-serif; 
-  color: #FFF;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  width: 100px; 
   height: 40px;
 }
 
-.emailEdit {
+.EditTex {
   height: 44px;
   font-size: 16px;
   width: 100%;
@@ -200,43 +182,37 @@ a:hover { color: #777; }
   border: 1px solid #d9d9d9;
   border-top: 1px solid #c0c0c0;
   padding: 0 8px;
-}
-
-.emailPassEdit {
-  height: 44px;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 10px;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  border-top: 1px solid #c0c0c0;
-  padding: 0 8px;
-}
-
-.MyUNLVEdit {
-  height: 44px;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 10px;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  border-top: 1px solid #c0c0c0;
-  padding: 0 8px;
-}
-
-.MyUNLVPassEdit {
-  height: 44px;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 10px;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  border-top: 1px solid #c0c0c0;
-  padding: 0 8px;
+  color: #000;
 }
 
 .login table {
     margin-left: auto;
     margin-right: auto;
-    
+}
+
+#map {
+  height: 350px;
+  width: 75%; 
+  margin-top: 15px;
+  margin-left: 12.5%;
+}
+.addressP{
+  margin-top: 25px;
+}
+
+.destin{
+  border-radius: 28px;
+  background-color: #C10202;
+  border-color: #C10202;
+  font: bold 15px/40px arial, sans-serif; 
+  margin-top: 5px;
+  margin-bottom: 20px; 
+  height: 40px;
+}
+.destin:hover{
+  box-shadow: 0 0 20px #C10202 ;
+  text-shadow: 0 0 5px #FFF ;
+}
+#error, .destinationDiv{
+  font: bold 15px/40px arial, sans-serif; 
 }
