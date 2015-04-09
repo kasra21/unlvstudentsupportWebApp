@@ -176,13 +176,16 @@ body {
 .EditTex {
   height: 44px;
   font-size: 16px;
-  width: 100%;
   margin-bottom: 10px;
   background: #fff;
   border: 1px solid #d9d9d9;
   border-top: 1px solid #c0c0c0;
   padding: 0 8px;
   color: #000;
+}
+
+#GmailUserText, #GmailPassText, #UnlvUserText, #UnlvPassText {
+  width: 100%;
 }
 
 .login table {
@@ -215,4 +218,16 @@ body {
 }
 #error, .destinationDiv{
   font: bold 15px/40px arial, sans-serif; 
+}
+.MainClassEnter{
+  width: 50%;
+  margin: 0 auto;
+  text-align:center;
+}
+#ClassDep{
+  width: 50%;
+}
+
+#BuildText, #BuildNumText{
+  width: 30%;
 }

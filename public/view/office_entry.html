@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNLV Student Support Application</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<h2>UNLV Student Support Application</h2>
+
+<ul class="mainList">
+    <a class="main" href="#">Instructor Office Entry</a>
+    <li class="n9">
+        <a>
+            <form action="cgi-bin/formmail.pl" method="post">
+                Instr. First Name: <input type="text" name="firstName" value="" size="10" maxlength="50" />
+            </form>
+        </a>
+    </li>
+    <li class="n9">
+        <a>
+            <form action="cgi-bin/formmail.pl" method="post">
+                Instr. Last Name: <input type="text" name="lastName" value="" size="10" maxlength="50" />
+            </form>
+        </a>
+    </li>
+    <li class="n9">
+        <a>
+            <form action="cgi-bin/formmail.pl" method="post">
+                Department: <input type="text" name="dept" value="" size="3" maxlength="50" />
+            </form>
+        </a>
+    </li>
+    <li class="n9">
+        <a>
+            <form action="cgi-bin/formmail.pl" method="post">
+                Building:  <input type="text" name="building" value="" size="5" maxlength="50" />
+                Office:  <input type="text" name="officeNum" value="" size="5" maxlength="50" />
+            </form>
+        </a>
+    </li>
+    <li class="n9">
+        <a>
+            <input type="submit" name="save" value="Save" />
+            <input type="button" value="Back" onclick="history.go(-1);return true;">
+        </a>
+    </li>
+   
+</ul>
+
+</html>
