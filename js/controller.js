@@ -1010,5 +1010,25 @@ function UNLVLogin(){
 }
 
 //-------------------------------------
+//For the map from manual entry
+var destinGlob;
+var j;
+    function redirectMapEntry(){
+      destinGlob = 1 + document.getElementById('destination').selectedIndex;
+      localStorage.setItem("temp",destinGlob);
+      window.location.href = "ManualEntryMap.html";
+    }
 
+    function drawDirectionsPlus(){
 
+      // Hide all polylines
+      for (j in paths) {
+        paths[j].setOptions({ map: null });
+      }
+
+      // Show the route
+      if (typeof paths[localStorage.getItem("temp")] !== 'undefined') {
+        paths[localStorage.getItem("temp")].setOptions({ map: map });
+      }
+
+    }

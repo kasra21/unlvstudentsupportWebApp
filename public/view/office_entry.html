@@ -1,53 +1,397 @@
 ﻿<!DOCTYPE html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UNLV Student Support Application</title>
-    <link rel="stylesheet" href="index.css">
+<html>
 
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UNLV Student Support Application</title>
+        <link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.css">
+        <link rel='stylesheet' type='text/css' href="../index.css">
+    </head>
 
-<h2>UNLV Student Support Application</h2>
+    <body>
 
-<ul class="mainList">
-    <a class="main" href="#">Instructor Office Entry</a>
-    <li class="n9">
-        <a>
-            <form action="cgi-bin/formmail.pl" method="post">
-                Instr. First Name: <input type="text" name="firstName" value="" size="10" maxlength="50" />
-            </form>
-        </a>
-    </li>
-    <li class="n9">
-        <a>
-            <form action="cgi-bin/formmail.pl" method="post">
-                Instr. Last Name: <input type="text" name="lastName" value="" size="10" maxlength="50" />
-            </form>
-        </a>
-    </li>
-    <li class="n9">
-        <a>
-            <form action="cgi-bin/formmail.pl" method="post">
-                Department: <input type="text" name="dept" value="" size="3" maxlength="50" />
-            </form>
-        </a>
-    </li>
-    <li class="n9">
-        <a>
-            <form action="cgi-bin/formmail.pl" method="post">
-                Building:  <input type="text" name="building" value="" size="5" maxlength="50" />
-                Office:  <input type="text" name="officeNum" value="" size="5" maxlength="50" />
-            </form>
-        </a>
-    </li>
-    <li class="n9">
-        <a>
-            <input type="submit" name="save" value="Save" />
-            <input type="button" value="Back" onclick="history.go(-1);return true;">
-        </a>
-    </li>
-   
-</ul>
+        <h2 class="titleText">UNLV Student Support Application</h2>
+        <h2 class="titleText">Manual Instructor Office Entry</h2>
+
+        <div class="MainClassEnter">
+
+            <div> <h4> Instructor First & Last Name </h4>
+                <input class="EditTex" id="InstFirst" type="text" />
+                <input class="EditTex" id="InstLast" type="text" />
+            </div>
+
+            <div> <h4> Department & Class Number </h4>
+
+            <select class="destin" id="ClassDep">
+                <option value="aad">AAD</option>
+                <option value="aae">AAE</option>
+                <option value="aai">AAI</option>
+                <option value="aal">AAL</option>
+                <option value="abs">ABS</option>
+                <option value="aca">ACA</option>
+                <option value="acc">ACC</option>
+                <option value="aes">AES</option>
+                <option value="ahp">AHP</option>
+                <option value="aiis">AIIS</option>
+                <option value="ais">AIS</option>
+                <option value="ant">ANT</option>
+                <option value="anth">ANTH</option>
+                <option value="ara">ARA</option>
+                <option value="art">ART</option>
+                <option value="ast">AST</option>
+                <option value="ate">ATE</option>
+
+                <option value="bges">BGES</option>
+                <option value="bio">BIO</option>
+                <option value="biol">BIOL</option>
+                <option value="bios">BIOS</option>
+                <option value="blw">BLW</option>
+                <option value="bus">BUS</option>
+
+                <option value="ced">CED</option>
+                <option value="cee">CEE</option>
+                <option value="ceg">CEG</option>
+                <option value="cem">CEM</option>
+                <option value="cep">CEP</option>
+                <option value="cfa">CFA</option>
+                <option value="che">CHE</option>
+                <option value="chem">CHEM</option>
+                <option value="chi">CHI</option>
+                <option value="cie">CIE</option>
+                <option value="cig">CIG</option>
+                <option value="cil">CIL</option>
+                <option value="cim">CIM</option>
+                <option value="cir">CIR</option>
+                <option value="cis">CIS</option>
+                <option value="cit">CIT</option>
+                <option value="citr">CITR</option>
+                <option value="cla">CLA</option>
+                <option value="cls">CLS</option>
+                <option value="cmi">CMI</option>
+                <option value="cns">CNS</option>
+                <option value="coe">COE</option>
+                <option value="col">COL</option>
+                <option value="cola">COLA</option>
+                <option value="com">COM</option>
+                <option value="cos">COS</option>
+                <option value="cou">COU</option>
+                <option value="cpe">CPE</option>
+                <option value="cps">CPS</option>
+                <option value="crj">CRJ</option>
+                <option value="cs">CS</option>
+                <option value="csc">CSC</option>
+                <option value="cst">CST</option>
+
+                <option value="dan">DAN</option>
+                <option value="den">DEN</option>
+                <option value="des">DES</option>
+                <option value="dms">DMS</option>
+                <option value="dpt">DPT</option>
+
+                <option value="eab">EAB</option>
+                <option value="ecd">ECD</option>
+                <option value="ece">ECE</option>
+                <option value="ecem">ECEM</option>
+                <option value="ecg">ECG</option>
+                <option value="ech">ECH</option>
+                <option value="eco">ECO</option>
+                <option value="econ">ECON</option>
+                <option value="eda">EDA</option>
+                <option value="edct">EDCT</option>
+                <option value="edel">EDEL</option>
+                <option value="edh">EDH</option>
+                <option value="edms">EDMS</option>
+                <option value="edrl">EDRL</option>
+                <option value="edsc">EDSC</option>
+                <option value="edsp">EDSP</option>
+                <option value="edu">EDU</option>
+                <option value="educ">EDUC</option>
+                <option value="edw">EDW</option>
+                <option value="edwf">EDWF</option>
+                <option value="ee">EE</option>
+                <option value="eed">EED</option>
+                <option value="eeg">EEG</option>
+                <option value="egg">EGG</option>
+                <option value="elec">ELEC</option>
+                <option value="emba">EMBA</option>
+                <option value="eng">ENG</option>
+                <option value="engl">ENGL</option>
+                <option value="ens">ENS</option>
+                <option value="env">ENV</option>
+                <option value="eoh">EOH</option>
+                <option value="epc">EPC</option>
+                <option value="epp">EPP</option>
+                <option value="eps">EPS</option>
+                <option value="epy">EPY</option>
+                <option value="ese">ESE</option>
+                <option value="esl">ESL</option>
+                <option value="esp">ESP</option>
+                <option value="esr">ESR</option>
+                <option value="ets">ETS</option>
+                <option value="exl">EXL</option>
+
+                <option value="fab">FAB</option>
+                <option value="fin">FIN</option>
+                <option value="fis">FIS</option>
+                <option value="fol">FOL</option>
+                <option value="fre">FRE</option>
+                <option value="fren">FREN</option>
+
+                <option value="gam">GAM</option>
+                <option value="gen">GEN</option>
+                <option value="geo">GEO</option>
+                <option value="geog">GEOG</option>
+                <option value="geol">GEOL</option>
+                <option value="ger">GER</option>
+                <option value="gey">GEY</option>
+                <option value="gra">GRA</option>
+                <option value="grc">GRC</option>
+                <option value="gre">GRE</option>
+                <option value="gsc">GSC</option>
+                <option value="gwk">GWK</option>
+
+                <option value="harc">HARC</option>
+                <option value="hard">HARD</option>
+                <option value="hca">HCA</option>
+                <option value="heb">HEB</option>
+                <option value="hed">HED</option>
+                <option value="his">HIS</option>
+                <option value="hmd">HMD</option>
+                <option value="hoa">HOA</option>
+                <option value="hon">HON</option>
+                <option value="hps">HPS</option>
+                <option value="hsc">HSC</option>
+
+                <option value="ib">IB</option>
+                <option value="ice">ICE</option>
+                <option value="icg">ICG</option>
+                <option value="ics">ICS</option>
+                <option value="ids">IDS</option>
+                <option value="inf">INF</option>
+                <option value="ipg">IPG</option>
+                <option value="is">IS</option>
+                <option value="ita">ITA</option>
+                <option value="ital">ITAL</option>
+                <option value="ite">ITE</option>
+
+                <option value="jap">JAP</option>
+                <option value="jms">JMS</option>
+                <option value="jour">JOUR</option>
+                <option value="jpn">JPN</option>
+
+                <option value="kin">KIN</option>
+
+                <option value="land">land</option>
+                <option value="las">LAS</option>
+                <option value="lat">LAT</option>
+                <option value="law">LAW</option>
+                <option value="lbs">LBS</option>
+                <option value="lib">LIB</option>
+                <option value="lin">LIN</option>
+
+                <option value="mat">MAT</option>
+                <option value="math">MATH</option>
+                <option value="mba">MBA</option>
+                <option value="me">ME</option>
+                <option value="meg">MEG</option>
+                <option value="mft">MFT</option>
+                <option value="mgt">MGT</option>
+                <option value="mha">MHA</option>
+                <option value="mil">MIL</option>
+                <option value="mis">MIS</option>
+                <option value="mkt">MKT</option>
+                <option value="msc">MSC</option>
+                <option value="msfs">MSFS</option>
+                <option value="mus">MUS</option>
+                <option value="musa">MUSA</option>
+                <option value="musc">MUSC</option>
+                <option value="muse">MUSE</option>
+
+                <option value="nres">NRES</option>
+                <option value="nse">NSE</option>
+                <option value="ntr">NTR</option>
+                <option value="nuc">NUC</option>
+                <option value="nur">NUR</option>
+                <option value="nurs">NURS</option>
+                <option value="nutr">NUTR</option>
+
+                <option value="orth">ORTH</option>
+
+                <option value="paf">PAF</option>
+                <option value="pbh">PBH</option>
+                <option value="ped">PED</option>
+                <option value="pedo">PEDO</option>
+                <option value="per">PER</option>
+                <option value="pex">PEX</option>
+                <option value="pgde">PGDE</option>
+                <option value="pgm">PGM</option>
+                <option value="phi">PHI</option>
+                <option value="phil">PHIL</option>
+                <option value="phs">PHS</option>
+                <option value="pht">PHT</option>
+                <option value="phy">PHY</option>
+                <option value="phys">PHYS</option>
+                <option value="port">PORT</option>
+                <option value="pos">POS</option>
+                <option value="psc">PSC</option>
+                <option value="psy">PSY</option>
+                <option value="ptg">PTG</option>
+                <option value="pts">PTS</option>
+                <option value="pua">PUA</option>
+
+                <option value="rad">RAD</option>
+                <option value="rdch">RDCH</option>
+                <option value="re">RE</option>
+                <option value="rec">REC</option>
+                <option value="rls">RLS</option>
+                <option value="rpdp">RPPD</option>
+                <option value="rsc">RSC</option>
+                <option value="rus">RUS</option>
+
+                <option value="sci">SCI</option>
+                <option value="scm">SCM</option>
+                <option value="sim">SIM</option>
+                <option value="sls">SLS</option>
+                <option value="soc">SOC</option>
+                <option value="spa">SPA</option>
+                <option value="span">SPAN</option>
+                <option value="sta">STA</option>
+                <option value="stat">STAT</option>
+                <option value="sw">SW</option>
+                <option value="swk">SWK</option>
+
+                <option value="tca">TCA</option>
+                <option value="tesl">TESL</option>
+                <option value="teslr">TESLR</option>
+                <option value="tha">THA</option>
+                <option value="thtr">THTR</option>
+                <option value="trcr">TRCR</option>
+
+                <option value="uld">ULD</option>
+                <option value="uns">UNS</option>
+
+                <option value="wdl">WDL</option>
+                <option value="wlc">WLC</option>
+                <option value="wmst">WMST</option>
+                <option value="wom">WOM</option>
+                <option value="wrm">WRM</option>
+            </select>
+        </div>
+
+        <div>
+                <h4> Building & Room number </h4>
+
+            <select class="destin" id="destination">
+                <option>ALB</option>
+                <option>ARC</option>
+                <option>ASC</option>
+                <option>BDC</option>
+                <option>BEH</option>
+                <option>BGC</option>
+                <option>BHS</option>
+                <option>BKS</option>
+                <option>BMC</option>
+                <option>BPB</option>
+                <option>BSL</option>
+                <option>CBC</option>
+                <option>CDC</option>
+                <option>CEB</option>
+                <option>CHE</option>
+                <option>CNC</option>
+                <option>COX</option>
+                <option>CSB</option>
+                <option>DAY</option>
+                <option>DIN</option>
+                <option>EMS</option>
+                <option>EPA</option>
+                <option>FDH</option>
+                <option>FMA</option>
+                <option>FND</option>
+                <option>FTC</option>
+                <option>GRA</option>
+                <option>GRS</option>
+                <option>GUA</option>
+                <option>HBL</option>
+                <option>HCH</option>
+                <option>HEA</option>
+                <option>HFA</option>
+                <option>HOU</option>
+                <option>HWB</option>
+                <option>JBT</option>
+                <option>LAC</option>
+                <option>LBC</option>
+                <option>LDS</option>
+                <option>LFG</option>
+                <option>LLB</option>
+                <option>MCB</option>
+                <option>MDC</option>
+                <option>MPE</option>
+                <option>MSB</option>
+                <option>MSM-HRC</option>
+                <option>O&amp;M</option>
+                <option>PAR-100</option>
+                <option>PAR-101</option>
+                <option>PAR-200</option>
+                <option>PAR-300</option>
+                <option>PAR-400</option>
+                <option>PAR-500</option>
+                <option>PAR-600</option>
+                <option>PES</option>
+                <option>PHQ</option>
+                <option>PKG1</option>
+                <option>PKG2</option>
+                <option>PRO</option>
+                <option>PSB</option>
+                <option>RAB</option>
+                <option>RAJ</option>
+                <option>RHW</option>
+                <option>RPL</option>
+                <option>RRC</option>
+                <option>RWC</option>
+                <option>SAM</option>
+                <option>SBS</option>
+                <option>SCS</option>
+                <option>SEB</option>
+                <option>SFB</option>
+                <option>SLC-A</option>
+                <option>SLC-B</option>
+                <option>SLC-C</option>
+                <option>SLC-D</option>
+                <option>SOU</option>
+                <option>SSC</option>
+                <option>STL</option>
+                <option>SU</option>
+                <option>SWC</option>
+                <option>TAC</option>
+                <option>TAY</option>
+                <option>TBE</option>
+                <option>TEC</option>
+                <option>TMC</option>
+                <option>TMW</option>
+                <option>TON</option>
+                <option>TWH</option>
+                <option>UCC</option>
+                <option>UNH</option>
+                <option>USB</option>
+                <option>UTC</option>
+                <option>WBS</option>
+                <option>WHI</option>
+                <option>WRI</option>
+                <option>WRL</option>
+            </select>
+
+
+            <input class="EditTex" id="BuildNumText" type="text"/>
+            </div>
+
+            <button class="btn-primary" id="CustBtn" onclick="goBack()">Go Back</button>
+            <button class="btn-primary" id="CustBtn" onclick="redirectMapEntry();">Get Direction</button>
+            
+        </div>
+
+        <script src="../../js/controller.js"></script>
+    </body>
 
 </html>

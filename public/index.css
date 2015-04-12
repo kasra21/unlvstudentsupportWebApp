@@ -224,10 +224,7 @@ body {
   margin: 0 auto;
   text-align:center;
 }
-#ClassDep{
-  width: 50%;
-}
 
-#BuildText, #BuildNumText{
+#BuildText, #BuildNumText, #classNum{
   width: 30%;
 }
